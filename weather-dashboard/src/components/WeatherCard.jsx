@@ -1,13 +1,14 @@
 function WeatherCard({ data }) {
-  const iconUrl = `https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
-
   return (
-    <div className="card">
+    <div>
       <h2>{data.name}</h2>
-      <img src={iconUrl} alt={data.weather[0].description} />
+      <img
+        src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`}
+        alt={data.weather[0].description}
+      />
       <h3>{Math.round(data.main.temp)}°C</h3>
       <p>Humidity: {data.main.humidity}%</p>
-      <p>Wind Speed: {data.wind.speed} m/s</p>
+      <p>Wind: {data.wind.speed} m/s</p>
       <p>{data.weather[0].description}</p>
     </div>
   );

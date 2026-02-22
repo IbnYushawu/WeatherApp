@@ -1,5 +1,5 @@
 function ErrorMessage({ message }) {
-  return <div className="error">{message}</div>;
+  return <div>Error: {message}</div>;
 }
 
 export default ErrorMessage;

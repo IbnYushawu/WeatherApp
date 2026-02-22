@@ -1,5 +1,5 @@
 function Loading() {
-  return <div className="spinner"></div>;
+  return <div>Loading...</div>;
 }
 
 export default Loading;

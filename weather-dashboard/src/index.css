@@ -1,3 +1,4 @@
+/* Reset default margins/paddings */
 * {
   margin: 0;
   padding: 0;
@@ -5,83 +6,54 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Body styling */
 body {
   min-height: 100vh;
-  background: linear-gradient(135deg, #4f46e5, #9333ea);
-  color: #fff;
-}
-
-.app {
-  max-width: 420px;
-  margin: auto;
-  padding: 2rem 1rem;
-  text-align: center;
-}
-
-h1 {
-  margin-bottom: 1rem;
-}
-
-form {
+  background-color: #f0f0f0;
+  color: #333;
   display: flex;
   justify-content: center;
-  margin-bottom: 1rem;
+  padding: 2rem;
 }
 
+/* App container */
+div {
+  width: 100%;
+  max-width: 420px;
+}
+
+/* Form styling */
 input {
-  padding: 0.6rem;
-  border-radius: 6px 0 0 6px;
-  border: none;
-  outline: none;
+  padding: 0.5rem;
   width: 70%;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  outline: none;
 }
 
 button {
-  padding: 0.6rem 1rem;
-  border: none;
-  background: #22d3ee;
-  color: #000;
-  font-weight: bold;
-  border-radius: 0 6px 6px 0;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-radius: 0 4px 4px 0;
   cursor: pointer;
+  background-color: #ddd;
 }
 
-button:hover {
-  opacity: 0.9;
+/* Weather Card */
+img {
+  width: 100px;
 }
 
-.card {
-  background: rgba(255, 255, 255, 0.15);
-  padding: 1.5rem;
-  border-radius: 12px;
+/* Error message */
+div.error {
+  color: red;
   margin-top: 1rem;
 }
 
-.spinner {
-  width: 45px;
-  height: 45px;
-  border: 5px solid rgba(255, 255, 255, 0.3);
-  border-top: 5px solid white;
-  border-radius: 50%;
-  margin: 1.5rem auto;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.error {
-  background: rgba(255, 0, 0, 0.3);
-  padding: 0.75rem;
-  border-radius: 8px;
-  margin-top: 1rem;
-}
-
-@media (min-width: 768px) {
-  .app {
-    max-width: 600px;
-  }
+/* History buttons */
+div button {
+  margin: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
 }
