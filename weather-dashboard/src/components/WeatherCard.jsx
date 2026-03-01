@@ -7,9 +7,9 @@ function WeatherCard({ data }) {
         alt={data.weather[0].description}
       />
       <h3>{Math.round(data.main.temp)}°C</h3>
-      <p>Humidity: {data.main.humidity}%</p>
-      <p>Wind Speed: {data.wind.speed} m/s</p>
       <p>{data.weather[0].description}</p>
+      <p>Humidity: {data.main.humidity}%</p>
+      <p>Wind: {data.wind.speed} m/s</p>
     </div>
   );
 }
