@@ -1,59 +1,106 @@
-/* Reset default margins/paddings */
+:root {
+  --primary: #6366f1;
+  --secondary: #9333ea;
+  --accent: #22d3ee;
+  --glass: rgba(255, 255, 255, 0.18);
+  --text-light: #f8fafc;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Segoe UI", system-ui, sans-serif;
 }
 
-/* Body styling */
 body {
   min-height: 100vh;
-  background-color: #f0f0f0;
-  color: #333;
-  display: flex;
-  justify-content: center;
-  padding: 2rem;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: var(--text-light);
 }
 
-/* App container */
-div {
-  width: 100%;
+/* Main container */
+.app {
   max-width: 420px;
+  margin: auto;
+  padding: 2rem 1rem;
+  text-align: center;
 }
 
-/* Form styling */
+/* Title */
+h1 {
+  margin-bottom: 1.5rem;
+}
+
+/* Search bar */
+form {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
 input {
-  padding: 0.5rem;
-  width: 70%;
-  border: 1px solid #ccc;
-  border-radius: 4px 0 0 4px;
+  flex: 1;
+  padding: 0.7rem;
+  border-radius: 8px 0 0 8px;
+  border: none;
   outline: none;
 }
 
 button {
-  padding: 0.5rem 1rem;
-  border: 1px solid #ccc;
-  border-left: none;
-  border-radius: 0 4px 4px 0;
+  padding: 0.7rem 1rem;
+  border: none;
+  background: var(--accent);
+  color: #000;
+  font-weight: bold;
+  border-radius: 0 8px 8px 0;
   cursor: pointer;
-  background-color: #ddd;
 }
 
-/* Weather Card */
-img {
-  width: 100px;
+button:hover {
+  opacity: 0.9;
+}
+
+/* Weather card */
+.card {
+  background: var(--glass);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+  width: 120px;
+}
+
+/* Loading spinner */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-top: 5px solid white;
+  border-radius: 50%;
+  margin: 2rem auto;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Error message */
-div.error {
-  color: red;
+.error {
+  background: rgba(255, 0, 0, 0.3);
+  padding: 0.75rem;
+  border-radius: 8px;
   margin-top: 1rem;
 }
 
-/* History buttons */
-div button {
-  margin: 0.25rem;
-  padding: 0.25rem 0.5rem;
-  cursor: pointer;
+/* Responsive layout */
+@media (min-width: 768px) {
+  .app {
+    max-width: 600px;
+  }
 }
